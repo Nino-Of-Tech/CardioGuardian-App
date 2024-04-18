@@ -11,7 +11,9 @@ st.set_page_config(page_title="CardioGuardian",
 
 # loading the saved model
 
-heart_disease_model = pickle.load(open(f'C:/Users/Lenovo/Desktop/saved_model/heart_disease_model.sav', 'rb'))
+# heart_disease_model = pickle.load(open(f'C:/Users/Lenovo/Desktop/saved_model/heart_disease_model.sav', 'rb'))
+
+heart_disease_model = pickle.load(open('saved_model/heart_disease_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
