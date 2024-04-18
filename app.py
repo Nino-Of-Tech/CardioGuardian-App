@@ -8,13 +8,10 @@ st.set_page_config(page_title="CardioGuardian",
                    layout="wide",
                    page_icon="🧑‍⚕️")
 
-    
-# getting the working directory of the main.py
-working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # loading the saved model
 
-heart_disease_model = pickle.load(open(f'{working_dir}/saved_models/heart_disease_model.sav', 'rb'))
+heart_disease_model = pickle.load(open(f'C:/Users/Lenovo/Desktop/saved_model/heart_disease_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
