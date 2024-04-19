@@ -11,15 +11,13 @@ st.set_page_config(page_title="CardioGuardian",
 
 # loading the saved model
 
-# heart_disease_model = pickle.load(open(f'C:/Users/Lenovo/Desktop/saved_model/heart_disease_model.sav', 'rb'))
-
 heart_disease_model = pickle.load(open('saved_model/heart_disease_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
     selected = option_menu('Heart Disease Prediction System',
 
-                           ['Heart Disease Prediction'],
+                           ['CardioGuardian'],
                            menu_icon='hospital-fill',
                            icons=['heart'],
                            default_index=0)
@@ -35,7 +33,8 @@ if selected == 'Heart Disease Prediction':
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        age = st.text_input('Age')
+#        age = st.text_input('Age')
+        age = st.number_input("Patient's Age in years", min_value=0, max_value=120, value=30) 
 
     with col2:
         sex = st.text_input('Sex')
@@ -47,7 +46,8 @@ if selected == 'Heart Disease Prediction':
         trestbps = st.text_input('Resting Blood Pressure')
 
     with col2:
-        chol = st.text_input('Serum Cholestoral in mg/dl')
+ #       chol = st.text_input('Serum Cholestoral in mg/dl')
+        chol = st.selectbox("Patient's Cholesterol Levels", [1, 2, 3])
 
     with col3:
         fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
