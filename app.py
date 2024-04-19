@@ -33,7 +33,8 @@ if selected == 'CardioGuardian':
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        age = st.text_input('Age')
+#        age = st.text_input('Age')
+        age = st.number_input("Patient's Age in years", min_value=0, max_value=120, value=30) 
 
     with col2:
         sex = st.text_input('Sex')
@@ -45,7 +46,8 @@ if selected == 'CardioGuardian':
         trestbps = st.text_input('Resting Blood Pressure')
 
     with col2:
-        chol = st.text_input('Serum Cholestoral in mg/dl')
+#        chol = st.text_input('Serum Cholestoral in mg/dl')
+        chol = st.number_input("Patient's Cholesterol Levels", min_value=0, max_value=500, value=245)
 
     with col3:
         fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
