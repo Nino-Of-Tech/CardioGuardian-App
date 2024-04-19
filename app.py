@@ -37,11 +37,7 @@ if selected == 'CardioGuardian':
         age = st.number_input("Age in years", min_value=0, max_value=120, value=30) 
 
     with col2:
- #       sex = st.text_input('Gender')
-        gender_options= {"Male": 0, "Female": 1} 
-        gender_options= {"Male": 0, "Female": 1} 
-        sex = st.selectbox ("Gender", list (gender_options.keys()))
-        gender = gender_options[sex]
+        sex = st.text_input('Gender: Male=0, Female=1')
 
     with col3:
 #        cp = st.text_input('Chest Pain types')
@@ -96,7 +92,7 @@ if selected == 'CardioGuardian':
 
         user_input = [age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]
 
-        user_input = [int(x) for x in user_input]
+        user_input = [float(x) for x in user_input]
 
         heart_prediction = heart_disease_model.predict([user_input])
 
