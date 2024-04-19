@@ -73,7 +73,7 @@ if selected == 'CardioGuardian':
 
     with col1:
 #        oldpeak = st.text_input('ST depression induced by exercise')
-        oldpeak = st.number_input("ST depression induced by exercise", min_value=0, max_value=8, value=3.2)
+        oldpeak = st.number_input("ST depression induced by exercise", min_value=0, max_value=8, value=3)
 
     with col2:
 #        slope = st.text_input('Slope of the peak exercise ST segment')
