@@ -33,8 +33,7 @@ if selected == 'Heart Disease Prediction':
     col1, col2, col3 = st.columns(3)
 
     with col1:
-#        age = st.text_input('Age')
-        age = st.number_input("Patient's Age in years", min_value=0, max_value=120, value=30) 
+        age = st.text_input('Age')
 
     with col2:
         sex = st.text_input('Sex')
@@ -46,8 +45,7 @@ if selected == 'Heart Disease Prediction':
         trestbps = st.text_input('Resting Blood Pressure')
 
     with col2:
- #       chol = st.text_input('Serum Cholestoral in mg/dl')
-        chol = st.selectbox("Patient's Cholesterol Levels", [1, 2, 3])
+        chol = st.text_input('Serum Cholestoral in mg/dl')
 
     with col3:
         fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
@@ -87,7 +85,7 @@ if selected == 'Heart Disease Prediction':
         heart_prediction = heart_disease_model.predict([user_input])
 
         if heart_prediction[0] == 1:
-            heart_diagnosis = 'The person is having heart disease'
+            heart_diagnosis = 'The person is having a heart disease'
         else:
             heart_diagnosis = 'The person does not have any heart disease'
 
