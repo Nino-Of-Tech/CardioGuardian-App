@@ -96,7 +96,7 @@ if selected == 'CardioGuardian':
 
         user_input = [age, sex, cp, trestbps, chol, fbs, restecg, thalach, exang, oldpeak, slope, ca, thal]
 
-        user_input = [float(x) for x in user_input]
+        user_input = [int(x) for x in user_input]
 
         heart_prediction = heart_disease_model.predict([user_input])
 
