@@ -25,7 +25,7 @@ with st.sidebar:
 
 
 # Heart Disease Prediction Page
-if selected == 'Heart Disease Prediction':
+if selected == 'CardioGuardian':
 
     # page title
     st.title('CardioGuardian')
