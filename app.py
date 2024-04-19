@@ -34,44 +34,58 @@ if selected == 'CardioGuardian':
 
     with col1:
 #        age = st.text_input('Age')
-        age = st.number_input("Patient's Age in years", min_value=0, max_value=120, value=30) 
+        age = st.number_input("Age in years", min_value=0, max_value=120, value=30) 
 
     with col2:
-        sex = st.text_input('Sex')
+ #       sex = st.text_input('Gender')
+        gender_options= {"Male": 0, "Female": 1} 
+        gender_options= {"Male": 0, "Female": 1} 
+        sex = st.selectbox ("Gender", list (gender_options.keys()))
+        gender = gender_options[sex]
 
     with col3:
-        cp = st.text_input('Chest Pain types')
+#        cp = st.text_input('Chest Pain types')
+        cp = st.number_input("Chest Pain types", min_value=0, max_value=3, value=2) 
 
     with col1:
-        trestbps = st.text_input('Resting Blood Pressure')
+#        trestbps = st.text_input('Resting Blood Pressure')
+        trestbps = st.number_input("Resting Blood Pressure", min_value=0, max_value=200, value=120) 
 
     with col2:
 #        chol = st.text_input('Serum Cholestoral in mg/dl')
         chol = st.number_input("Patient's Cholesterol Levels", min_value=0, max_value=500, value=245)
 
     with col3:
-        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+#        fbs = st.text_input('Fasting Blood Sugar > 120 mg/dl')
+        fbs = st.number_input("Fasting Blood Sugar", min_value=0, max_value=1, value=0) 
 
     with col1:
-        restecg = st.text_input('Resting Electrocardiographic results')
+#        restecg = st.text_input('Resting Electrocardiographic results')
+        restecg = st.number_input("Resting Electrocardiographic results", min_value=0, max_value=1, value=0) 
 
     with col2:
-        thalach = st.text_input('Maximum Heart Rate achieved')
+#        thalach = st.text_input('Maximum Heart Rate achieved')
+        thalach = st.number_input("Maximum Heart Rate achieved", min_value=0, max_value=220, value=155)        
 
     with col3:
-        exang = st.text_input('Exercise Induced Angina')
+#        exang = st.text_input('Exercise Induced Angina')
+        exang = st.number_input("Exercise Induced Angina", min_value=0, max_value=1, value=0)        
 
     with col1:
-        oldpeak = st.text_input('ST depression induced by exercise')
+#        oldpeak = st.text_input('ST depression induced by exercise')
+        oldpeak = st.number_input("ST depression induced by exercise", min_value=0, max_value=8, value=3.2)
 
     with col2:
-        slope = st.text_input('Slope of the peak exercise ST segment')
+#        slope = st.text_input('Slope of the peak exercise ST segment')
+        slope = st.number_input("Slope of the peak exercise ST segment", min_value=0, max_value=3, value=1)
 
     with col3:
-        ca = st.text_input('Major vessels colored by flourosopy')
+#        ca = st.text_input('Major vessels colored by flourosopy')
+        ca = st.number_input("Major vessels colored by flourosopy", min_value=0, max_value=4, value=2)
 
     with col1:
-        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+#        thal = st.text_input('thal: 0 = normal; 1 = fixed defect; 2 = reversable defect')
+        thal = st.number_input("thal: 0 = normal; 1 = fixed defect; 2 = reversable defect", min_value=0, max_value=4, value=2)
 
     # code for Prediction
     heart_diagnosis = ''
